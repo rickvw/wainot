@@ -69,6 +69,17 @@
     .band .btn:hover { background:#f2fbf7; }
     .band-art { width:100%; height:auto; }
 
+    .demo { display:grid; grid-template-columns: 1fr 1fr; gap:36px; align-items:center; }
+    .chat { background:#fff; border:1px solid var(--line); border-radius:20px; padding:24px; box-shadow:0 20px 40px rgba(20,32,28,.07); }
+    .bubble { border-radius:16px; padding:14px 16px; margin-bottom:12px; font-size:15px; max-width:92%; }
+    .bubble.jij { background:var(--accent-soft); margin-left:auto; }
+    .bubble.ai { background:var(--sand); }
+    .bron { display:inline-block; font-size:12px; color:var(--accent-deep); background:#fff; border:1px solid var(--line); border-radius:999px; padding:2px 9px; margin:8px 6px 0 0; }
+    .akkoord { display:flex; gap:10px; margin-top:14px; }
+    .akkoord span { font-size:13px; padding:8px 14px; border-radius:999px; border:1px solid var(--line); background:#fff; }
+    .akkoord span.ok { background:var(--accent); color:#fff; border-color:var(--accent); }
+    .voorbeeld { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin:0 0 12px; }
+    @media (max-width: 880px) { .demo { grid-template-columns: 1fr; } }
     .box { background:#fff; border:1px solid var(--line); border-radius:18px; padding:30px; }
     details { border-bottom:1px solid var(--line); padding: 18px 0; }
     details:last-child { border-bottom:0; }
@@ -179,6 +190,25 @@
         <div class="example">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#d8652b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19c4-2 5-8 16-14"/><circle cx="5" cy="19" r="1.5"/><path d="M14 6l4 4"/></svg></div>
           <div><strong>"Ik wil hier iets mee, maar niet weten waar te beginnen."</strong><span>Wij kiezen samen één klus, en jij zet deze week de eerste stap.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="demo" class="warm">
+    <div class="wrap demo">
+      <div>
+        <p class="eyebrow">Zo ziet het eruit</p>
+        <h2>Een vraag stellen. Een antwoord met bronnen. Jij beslist.</h2>
+        <p class="sub" style="margin-bottom:0">Dit is een voorbeeld van een gesprek over een echte klus. Het antwoord is gemaakt op basis van documenten die jij aanlevert, en elke stap wacht op jouw akkoord.</p>
+      </div>
+      <div class="chat" aria-label="Voorbeeld van een gesprek">
+        <p class="voorbeeld">Voorbeeld</p>
+        <div class="bubble jij">Welke offertes van dit jaar zijn nog open, en welke heeft de klant al bevestigd?</div>
+        <div class="bubble ai">
+          Vijf offertes staan nog open, en twee zijn bevestigd. De bevestigde offerte van Janssen is het duurst, maar wacht nog op een handtekening.
+          <div><span class="bron">offerte-janssen.pdf</span><span class="bron">mail 12 okt</span></div>
+          <div class="akkoord"><span class="ok">Ja, stuur op</span><span>Pas aan</span></div>
         </div>
       </div>
     </div>
