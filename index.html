@@ -3,47 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>wainot.nl · Begin vandaag met AI, zonder de bomen en het bos te verliezen</title>
-  <meta name="description" content="Te veel tools, te veel meningen, geen idee waar te beginnen? Wainot helpt je in gewone taal van nieuwsgierigheid naar één concrete stap die vandaag werkt.">
+  <title>wainot.nl · Heb je een klus waar AI bij kan helpen? Vertel het me.</title>
+  <meta name="description" content="Heb je een concrete klus waar AI bij kan helpen? Neem contact op, en we kijken samen wat zinvol is, in gewone taal.">
   <style>
-    :root { --ink:#1c1c1e; --muted:#5b5b63; --bg:#fbfaf7; --card:#ffffff; --line:#e6e3dc; --accent:#1f6f5c; --accent-2:#e9f3ef; --warm:#f3efe6; }
+    :root { --ink:#1c1c1e; --muted:#5b5b63; --bg:#fdfcf9; --card:#ffffff; --line:#e8e4dc; --accent:#1f6f5c; --accent-2:#e9f3ef; --warm:#f5f1e8; }
     * { box-sizing: border-box; }
-    body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
+    body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:var(--bg); line-height:1.65; }
     a { color:var(--accent); }
     .wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
     header { padding: 18px 0; border-bottom:1px solid var(--line); background:#fff; position:sticky; top:0; z-index:1; }
     header .wrap { display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
     .logo { font-weight:800; text-decoration:none; color:var(--ink); font-size:20px; letter-spacing:-0.01em; }
     nav a { margin-left:18px; color:var(--muted); text-decoration:none; font-size:15px; }
-    .btn { display:inline-block; background:var(--accent); color:#fff; padding:13px 22px; border-radius:10px; text-decoration:none; font-weight:600; border:0; font-size:16px; }
+    .btn { display:inline-block; background:var(--accent); color:#fff; padding:14px 24px; border-radius:10px; text-decoration:none; font-weight:600; border:0; font-size:16px; cursor:pointer; }
+    .btn:hover { filter: brightness(1.08); }
     .btn.ghost { background:transparent; color:var(--accent); border:1px solid var(--accent); }
-    section { padding: 72px 0; }
+    section { padding: 76px 0; }
     .eyebrow { font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin:0 0 12px; }
-    h1 { font-size: clamp(34px, 5.4vw, 60px); line-height:1.08; margin: 0 0 20px; letter-spacing:-0.025em; }
-    h2 { font-size: clamp(26px, 3.6vw, 36px); margin:0 0 12px; letter-spacing:-0.015em; line-height:1.15; }
-    .lead { font-size: 20px; color: var(--muted); max-width: 680px; margin: 0 0 32px; }
-    .sub { color:var(--muted); max-width: 680px; margin: 0 0 36px; font-size:17px; }
-    .cta-row { display:flex; gap:12px; flex-wrap:wrap; }
-    .hero { padding-top: 88px; padding-bottom: 88px; }
+    h1 { font-size: clamp(34px, 5.4vw, 58px); line-height:1.1; margin: 0 0 20px; letter-spacing:-0.025em; }
+    h2 { font-size: clamp(26px, 3.6vw, 36px); margin:0 0 12px; letter-spacing:-0.015em; line-height:1.2; }
+    .lead { font-size: 20px; color: var(--muted); max-width: 660px; margin: 0 0 34px; }
+    .sub { color:var(--muted); max-width: 660px; margin: 0 0 36px; font-size:17px; }
+    .cta-row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .hint-small { font-size:14px; color:var(--muted); margin-top:14px; }
+    .hero { padding-top: 90px; padding-bottom: 90px; }
     .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:16px; }
     .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:26px; }
     .card .num { display:inline-flex; width:34px; height:34px; border-radius:50%; background:var(--accent-2); color:var(--accent); font-weight:700; align-items:center; justify-content:center; margin-bottom:14px; }
     .card h3 { margin:0 0 8px; font-size:19px; }
     .card p { margin:0; color:var(--muted); font-size:15px; }
     .warm { background: var(--warm); }
-    .quick li { margin-bottom: 14px; font-size: 17px; }
-    .quick { padding-left: 20px; }
+    .examples { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:14px; }
+    .example { background:#fff; border-left:4px solid var(--accent); border-radius:10px; padding:18px 20px; color:var(--ink); }
+    .example strong { display:block; margin-bottom:4px; }
+    .example span { color:var(--muted); font-size:15px; }
     .box { background:#fff; border:1px solid var(--line); border-radius:14px; padding:28px; }
     details { border-bottom:1px solid var(--line); padding: 16px 0; }
     details summary { cursor:pointer; font-weight:600; font-size:17px; }
     details p { color:var(--muted); margin: 10px 0 0; }
-    form { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:30px; max-width:680px; }
+    .final { text-align:center; padding: 90px 0; }
+    .final .sub { margin-left:auto; margin-right:auto; }
+    form { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:30px; max-width:680px; margin: 0 auto; text-align:left; }
     label { display:block; font-weight:600; margin: 14px 0 6px; font-size:15px; }
     input, textarea { width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; font: inherit; background:#fff; }
-    textarea { min-height: 120px; resize: vertical; }
+    textarea { min-height: 130px; resize: vertical; }
     .hint { font-size:13px; color:var(--muted); margin-top:6px; }
     footer { padding: 36px 0; color: var(--muted); font-size: 14px; border-top:1px solid var(--line); }
-    @media (max-width: 640px) { nav { display:none; } section { padding: 52px 0; } .hero { padding-top: 56px; padding-bottom: 56px; } }
+    @media (max-width: 640px) { nav { display:none; } section { padding: 54px 0; } .hero { padding-top: 56px; padding-bottom: 56px; } .final { padding: 60px 0; } }
   </style>
 </head>
 <body>
@@ -52,12 +58,11 @@
   <div class="wrap">
     <a class="logo" href="#top">wainot</a>
     <nav>
-      <a href="#waarom">Waarom</a>
-      <a href="#begin">Begin</a>
+      <a href="#voorbeelden">Voorbeelden</a>
+      <a href="#hoe">Hoe het werkt</a>
       <a href="#vragen">Vragen</a>
-      <a href="#contact">Contact</a>
     </nav>
-    <a class="btn" href="#contact">Stel je vraag</a>
+    <a class="btn" href="#contact">Neem contact op</a>
   </div>
 </header>
 
@@ -65,82 +70,71 @@
 
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">AI, in gewone taal</p>
-      <h1>Je ziet door de bomen het bos niet meer. Dat hoeft niet.</h1>
-      <p class="lead">Er verschijnt elke week een nieuwe AI-tool, en iedereen heeft een mening. Wainot laat je zien wat écht bij jou past, en welke ene stap je vandaag kunt zetten.</p>
+      <p class="eyebrow">Heb je een klus in gedachten?</p>
+      <h1>Heb je een klus waar AI bij kan helpen? Vertel het me.</h1>
+      <p class="lead">Je hoeft niet te weten welke tool of welke techniek. Beschrijf één concrete klus, en ik laat je zien wat AI daarin kan betekenen, en wat je morgen al kunt proberen.</p>
       <div class="cta-row">
-        <a class="btn" href="#contact">Plan een vrijblijvende kennismaking</a>
-        <a class="btn ghost" href="#begin">Zo werkt het</a>
+        <a class="btn" href="#contact">Beschrijf je use case</a>
+        <a class="btn ghost" href="#voorbeelden">Bekijk voorbeelden</a>
+      </div>
+      <p class="hint-small">Vrijblijvend. Je betaalt niets voor het eerste gesprek.</p>
+    </div>
+  </section>
+
+  <section id="voorbeelden" class="warm">
+    <div class="wrap">
+      <p class="eyebrow">Voorbeelden van een concrete use case</p>
+      <h2>Herken je een van deze klussen?</h2>
+      <p class="sub">Het hoeft niet groot te zijn. Juist de kleine, terugkerende klus levert vaak de meeste tijdwinst op.</p>
+      <div class="examples">
+        <div class="example"><strong>"Ik krijg elke dag tientallen mails."</strong><span>Sorteren, samenvatten en concepten maken, met jij als laatste controle.</span></div>
+        <div class="example"><strong>"Mijn offertes kosten me een hele middag."</strong><span>Een eerste opzet maken op basis van je eerdere offertes, die jij afmaakt.</span></div>
+        <div class="example"><strong>"Ik weet niet wat er in onze documenten staat."</strong><span>Vragen stellen aan je eigen documenten, met bronnen die je kunt nalezen.</span></div>
+        <div class="example"><strong>"Ik wil iets met AI, maar weet niet waar te beginnen."</strong><span>Samen één klus kiezen, en één eerste stap die je deze week kunt zetten.</span></div>
       </div>
     </div>
   </section>
 
-  <section id="waarom" class="warm">
+  <section id="hoe">
     <div class="wrap">
-      <p class="eyebrow">Herken je dit?</p>
-      <h2>Veel nieuwsgierigheid, weinig resultaat.</h2>
-      <p class="sub">Je weet dat AI iets kan betekenen voor je werk. Maar waar begin je, en welke tool is de juiste? Dat blijft liggen.</p>
+      <p class="eyebrow">Hoe het werkt</p>
+      <h2>Van klus naar eerste resultaat, in drie stappen.</h2>
+      <p class="sub">Geen cursus, geen lange trajecten. Je beslist elke stap zelf.</p>
       <div class="grid">
-        <div class="card"><div class="num">1</div><h3>Te veel keuze</h3><p>Honderden tools, en elke week een nieuwe. Je weet niet welke je nodig hebt.</p></div>
-        <div class="card"><div class="num">2</div><h3>Te veel lawaai</h3><p>Overal hoor je hype of angst. Het echte nut verdwijnt eronder.</p></div>
-        <div class="card"><div class="num">3</div><h3>Geen eerste stap</h3><p>Je wilt iets proberen, maar je weet niet hoe je morgen begint.</p></div>
+        <div class="card"><div class="num">1</div><h3>Beschrijf je use case</h3><p>Wat is de klus, wat kost het je nu, en wat moet er uitkomen? Een paar zinnen is genoeg.</p></div>
+        <div class="card"><div class="num">2</div><h3>Ik laat je zien wat kan</h3><p>Eerlijk over wat AI goed doet, en over wat het niet doet. Ook als het antwoord is: dit hoeft niet met AI.</p></div>
+        <div class="card"><div class="num">3</div><h3>Jij kiest de volgende stap</h3><p>Zelf aan de slag met mijn advies, of samen uitwerken. Pas daarna maken we iets afspraken.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="begin">
-    <div class="wrap">
-      <p class="eyebrow">Begin vandaag</p>
-      <h2>Drie stappen. Geen cursus, geen jargon.</h2>
-      <p class="sub">Je hoeft niets te kiezen voordat je weet wat het oplevert.</p>
-      <div class="grid">
-        <div class="card"><div class="num">1</div><h3>Zoek je ene klus</h3><p>Welke taak kost je elke week het meeste tijd, en vind je zelf niet leuk? Begin daar, niet bij de tool.</p></div>
-        <div class="card"><div class="num">2</div><h3>Probeer het 15 minuten</h3><p>Geef de klus aan een AI en kijk wat er komt. Beoordeel zelf: is het bruikbaar, of moet je het anders vragen?</p></div>
-        <div class="card"><div class="num">3</div><h3>Bepaal het volgende</h3><p>Werkt het? Dan maak je er een vaste gewoonte van. Werkt het niet? Dan weet je dat ook, en kies je iets anders.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="warm">
-    <div class="wrap">
-      <p class="eyebrow">Doe dit deze week</p>
-      <h2>Drie kleine dingen die je vandaag kunt doen.</h2>
-      <p class="sub">Geen kosten, geen account nodig om te beginnen.</p>
-      <ol class="quick">
-        <li><strong>Schrijf één terugkerende taak op</strong> die je elke week kwijt bent. Mail, offertes, notities: alles telt.</li>
-        <li><strong>Vraag een AI om hulp</strong> bij precies die taak, en vertel erbij wat het resultaat moet zijn.</li>
-        <li><strong>Stel jezelf één vraag:</strong> wat zou ik met die tijd kunnen doen, als dit klaar is?</li>
-      </ol>
-    </div>
-  </section>
-
-  <section id="vragen">
+  <section id="vragen" class="warm">
     <div class="wrap">
       <p class="eyebrow">Veelgestelde vragen</p>
       <h2>Wat je misschien wilt weten</h2>
       <div class="box" style="margin-top:24px">
-        <details open><summary>Moet ik technisch zijn?</summary><p>Nee. Je hebt een helder doel en de bereidheid om te proberen. Met de juiste vraag kom je een heel eind.</p></details>
-        <details><summary>Gaat AI mijn werk overnemen?</summary><p>Wainot kijkt naar wat AI zinvol kan doen en wat niet. De beslissingen blijven bij jou. Je keurt elke stap zelf goed.</p></details>
-        <details><summary>Wat kost het?</summary><p>De kennismaking is vrijblijvend en kost niets. Wat het daarna kost, hangt af van je vraag. Dat bespreken we pas als we weten wat er speelt, zodat je altijd vooraf weet waar je aan toe bent.</p></details>
-        <details><summary>Mijn gegevens?</summary><p>Ik vraag alleen wat nodig is voor jouw vraag. Gevoelige gegevens deel je niet zonder dat we het samen hebben besproken.</p></details>
+        <details open><summary>Moet ik technisch zijn?</summary><p>Nee. Je hebt een concrete klus en de bereidheid om te proberen. De rest komt in het gesprek.</p></details>
+        <details><summary>Gaat AI mijn werk overnemen?</summary><p>De beslissingen blijven bij jou. AI stelt voor, en jij keurt elke stap goed. Ik help je vooral met de klussen die je niet meer wilt doen.</p></details>
+        <details><summary>Wat kost het?</summary><p>Het eerste gesprek is vrijblijvend en kost niets. Wat het daarna kost, hangt af van je use case. Dat bespreken we vooraf, zodat je altijd weet waar je aan toe bent.</p></details>
+        <details><summary>Wat gebeurt er met mijn gegevens?</summary><p>Ik vraag alleen wat nodig is voor jouw use case. Gevoelige gegevens deel je niet zonder dat we het samen hebben besproken.</p></details>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="warm">
+  <section id="contact" class="final">
     <div class="wrap">
-      <p class="eyebrow">Vrijblijvende kennismaking</p>
-      <h2>Vertel wat je wilt bereiken.</h2>
-      <p class="sub">Een paar zinnen is genoeg. In de kennismaking kijken we samen wat AI hierin kan, en wat je als eerste stap kunt zetten. Je verplicht je tot niets.</p>
+      <p class="eyebrow">Neem contact op</p>
+      <h2>Welke klus wil je aanpakken?</h2>
+      <p class="sub">Beschrijf je concrete use case in een paar zinnen. Ik reageer met wat AI daarin kan betekenen, en één eerste stap die je deze week kunt zetten.</p>
       <form action="mailto:info@rickvanwietmarschen.nl" method="post" enctype="text/plain">
         <label for="naam">Naam</label>
         <input id="naam" name="naam" autocomplete="name">
         <label for="mail">E-mail</label>
         <input id="mail" name="mail" type="email" autocomplete="email">
-        <label for="vraag">Wat wil je bereiken?</label>
-        <textarea id="vraag" name="vraag" placeholder="Bijvoorbeeld: ik wil mijn offertes sneller schrijven zonder dat het klinkt als een robot."></textarea>
+        <label for="usecase">Jouw concrete use case</label>
+        <textarea id="usecase" name="usecase" placeholder="Bijvoorbeeld: Ik krijg elke week tientallen offerteaanvragen, en het kost me een halve dag om ze te beantwoorden. Ik wil dat sneller, zonder dat het klinkt als een robot."></textarea>
         <p class="hint">Deze pagina stuurt nog niets door. Het formulier opent je mailprogramma.</p>
-        <p style="margin-top:20px"><button class="btn" type="submit">Verstuur</button></p>
+        <p style="margin-top:22px"><button class="btn" type="submit">Verstuur mijn use case</button></p>
       </form>
     </div>
   </section>
