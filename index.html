@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>wainot.nl · Heb je een klus waar AI bij kan helpen? Vertel het me.</title>
+  <meta name="description" content="Eén klus die je elke week kwijt bent? Vertel het me. Samen kijken we wat AI ervan kan maken, en welke stap je deze week zet.">
   <link rel="canonical" href="https://wainot.nl/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="wainot">
@@ -12,61 +13,101 @@
   <meta property="og:url" content="https://wainot.nl/">
   <meta property="og:locale" content="nl_NL">
   <meta name="twitter:card" content="summary">
-  <meta name="description" content="Heb je een concrete klus waar AI bij kan helpen? Neem contact op, en we kijken samen wat zinvol is, in gewone taal.">
   <style>
-    :root { --ink:#1c1c1e; --muted:#5b5b63; --bg:#fdfcf9; --card:#ffffff; --line:#e8e4dc; --accent:#1f6f5c; --accent-2:#e9f3ef; --warm:#f5f1e8; }
+    :root {
+      --ink:#14201c; --muted:#56635e; --bg:#fbfaf6; --card:#ffffff; --line:#e4e8e2;
+      --accent:#1f7a63; --accent-deep:#0f4d3f; --accent-soft:#e3f1ec; --sun:#f2b544; --sand:#f4efe4;
+    }
     * { box-sizing: border-box; }
     body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:var(--bg); line-height:1.65; }
-    a { color:var(--accent); }
-    .wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-    header { padding: 18px 0; border-bottom:1px solid var(--line); background:#fff; position:sticky; top:0; z-index:1; }
-    header .wrap { display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
-    .logo { font-weight:800; text-decoration:none; color:var(--ink); font-size:20px; letter-spacing:-0.01em; }
-    nav a { margin-left:18px; color:var(--muted); text-decoration:none; font-size:15px; }
-    .btn { display:inline-block; background:var(--accent); color:#fff; padding:14px 24px; border-radius:10px; text-decoration:none; font-weight:600; border:0; font-size:16px; cursor:pointer; }
-    .btn:hover { filter: brightness(1.08); }
-    .btn.ghost { background:transparent; color:var(--accent); border:1px solid var(--accent); }
-    section { padding: 76px 0; }
-    .eyebrow { font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin:0 0 12px; }
-    h1 { font-size: clamp(34px, 5.4vw, 58px); line-height:1.1; margin: 0 0 20px; letter-spacing:-0.025em; }
-    h2 { font-size: clamp(26px, 3.6vw, 36px); margin:0 0 12px; letter-spacing:-0.015em; line-height:1.2; }
-    .lead { font-size: 20px; color: var(--muted); max-width: 660px; margin: 0 0 34px; }
-    .sub { color:var(--muted); max-width: 660px; margin: 0 0 36px; font-size:17px; }
-    .cta-row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
-    .hint-small { font-size:14px; color:var(--muted); margin-top:14px; }
-    .hero { padding-top: 90px; padding-bottom: 90px; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:16px; }
-    .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:26px; }
-    .card .num { display:inline-flex; width:34px; height:34px; border-radius:50%; background:var(--accent-2); color:var(--accent); font-weight:700; align-items:center; justify-content:center; margin-bottom:14px; }
+    a { color:var(--accent-deep); }
+    img, svg { display:block; max-width:100%; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+    header { padding: 16px 0; background:rgba(251,250,246,.92); backdrop-filter: blur(8px); position:sticky; top:0; z-index:5; border-bottom:1px solid var(--line); }
+    header .wrap { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    .logo { display:flex; align-items:center; gap:10px; font-weight:800; text-decoration:none; color:var(--ink); font-size:20px; letter-spacing:-0.01em; }
+    nav a { margin-left:22px; color:var(--muted); text-decoration:none; font-size:15px; }
+    nav a:hover { color:var(--accent-deep); }
+    .btn { display:inline-block; background:var(--accent); color:#fff; padding:14px 24px; border-radius:999px; text-decoration:none; font-weight:700; border:0; font-size:16px; cursor:pointer; box-shadow: 0 6px 18px rgba(31,122,99,.25); transition: transform .15s, box-shadow .15s; }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(31,122,99,.3); }
+    .btn.ghost { background:transparent; color:var(--accent-deep); border:1.5px solid var(--accent-deep); box-shadow:none; }
+    section { padding: 88px 0; }
+    .eyebrow { display:inline-block; font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--accent-deep); background:var(--accent-soft); padding:6px 12px; border-radius:999px; margin:0 0 18px; }
+    h1 { font-size: clamp(38px, 5.6vw, 64px); line-height:1.05; margin: 0 0 22px; letter-spacing:-0.03em; }
+    h1 em { font-style:normal; color:var(--accent); }
+    h2 { font-size: clamp(28px, 3.8vw, 42px); margin:0 0 14px; letter-spacing:-0.02em; line-height:1.15; }
+    .lead { font-size: 20px; color: var(--muted); max-width: 620px; margin: 0 0 36px; }
+    .sub { color:var(--muted); max-width: 640px; margin: 0 0 44px; font-size:18px; }
+    .cta-row { display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+    .hint-small { font-size:14px; color:var(--muted); margin-top:16px; }
+
+    .hero { padding: 72px 0 96px; background: radial-gradient(1000px 500px at 85% -10%, #d9efe6 0%, transparent 60%), var(--bg); }
+    .hero .wrap { display:grid; grid-template-columns: 1.1fr 0.9fr; gap:56px; align-items:center; }
+    .hero-art { width:100%; height:auto; }
+
+    .warm { background: var(--sand); }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:18px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:28px; transition: transform .2s, box-shadow .2s; }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(20,32,28,.08); }
+    .icon { width:54px; height:54px; border-radius:16px; background:var(--accent-soft); display:flex; align-items:center; justify-content:center; margin-bottom:18px; }
+    .icon svg { width:28px; height:28px; }
     .card h3 { margin:0 0 8px; font-size:19px; }
     .card p { margin:0; color:var(--muted); font-size:15px; }
-    .warm { background: var(--warm); }
-    .examples { display:grid; grid-template-columns: repeat(2, 1fr); gap:14px; }
-    .example { background:#fff; border-left:4px solid var(--accent); border-radius:10px; padding:18px 20px; color:var(--ink); }
-    .example strong { display:block; margin-bottom:4px; }
+    .step-num { font-size:13px; font-weight:800; color:var(--sun); background:var(--ink); border-radius:999px; padding:3px 10px; display:inline-block; margin-bottom:12px; }
+
+    .examples { display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; }
+    .example { background:#fff; border-radius:18px; padding:24px 26px; border:1px solid var(--line); display:flex; gap:18px; align-items:flex-start; }
+    .example .icon { margin:0; flex:0 0 52px; }
+    .example strong { display:block; margin-bottom:6px; font-size:17px; }
     .example span { color:var(--muted); font-size:15px; }
-    .box { background:#fff; border:1px solid var(--line); border-radius:14px; padding:28px; }
-    details { border-bottom:1px solid var(--line); padding: 16px 0; }
-    details summary { cursor:pointer; font-weight:600; font-size:17px; }
-    details p { color:var(--muted); margin: 10px 0 0; }
-    .final { text-align:center; padding: 90px 0; }
+
+    .band { background: linear-gradient(120deg, var(--accent-deep), var(--accent)); color:#fff; border-radius:26px; padding:56px 48px; display:grid; grid-template-columns: 1.2fr 0.8fr; gap:40px; align-items:center; }
+    .band h2 { color:#fff; }
+    .band p { color:#d7efe7; font-size:18px; margin:0 0 24px; }
+    .band .btn { background:#fff; color:var(--accent-deep); box-shadow:none; }
+    .band .btn:hover { background:#f2fbf7; }
+    .band-art { width:100%; height:auto; }
+
+    .box { background:#fff; border:1px solid var(--line); border-radius:18px; padding:30px; }
+    details { border-bottom:1px solid var(--line); padding: 18px 0; }
+    details:last-child { border-bottom:0; }
+    details summary { cursor:pointer; font-weight:700; font-size:17px; }
+    details p { color:var(--muted); margin: 12px 0 0; }
+
+    .final { padding: 96px 0; text-align:center; }
     .final .sub { margin-left:auto; margin-right:auto; }
-    form { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:30px; max-width:680px; margin: 0 auto; text-align:left; }
-    label { display:block; font-weight:600; margin: 14px 0 6px; font-size:15px; }
-    input, textarea { width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:10px; font: inherit; background:#fff; }
+    form { background:#fff; border:1px solid var(--line); border-radius:20px; padding:34px; max-width:680px; margin: 0 auto; text-align:left; box-shadow:0 20px 40px rgba(20,32,28,.06); }
+    label { display:block; font-weight:700; margin: 16px 0 8px; font-size:15px; }
+    input, textarea { width:100%; padding:13px 15px; border:1px solid var(--line); border-radius:12px; font: inherit; background:#fff; }
+    input:focus, textarea:focus { outline: 2px solid var(--accent); border-color: transparent; }
     textarea { min-height: 130px; resize: vertical; }
-    .hint { font-size:13px; color:var(--muted); margin-top:6px; }
+    .hint { font-size:13px; color:var(--muted); margin-top:8px; }
     footer { padding: 36px 0; color: var(--muted); font-size: 14px; border-top:1px solid var(--line); }
-    @media (max-width: 640px) { nav { display:none; } .examples { grid-template-columns: 1fr; } section { padding: 54px 0; } .hero { padding-top: 56px; padding-bottom: 56px; } .final { padding: 60px 0; } }
+
+    @media (max-width: 880px) {
+      .hero .wrap { grid-template-columns: 1fr; }
+      .band { grid-template-columns: 1fr; padding: 40px 28px; }
+    }
+    @media (max-width: 640px) {
+      nav { display:none; }
+      section { padding: 60px 0; }
+      .hero { padding: 48px 0 60px; }
+      .examples { grid-template-columns: 1fr; }
+      .example { flex-direction: column; }
+      .final { padding: 64px 0; }
+    }
   </style>
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <a class="logo" href="#top">wainot</a>
+    <a class="logo" href="#top" aria-label="wainot home">
+      <svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#1f7a63"/><path d="M11 24c3-7 6-10 9-10s6 3 9 10" stroke="#f2b544" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="20" cy="14" r="2.6" fill="#f2b544"/></svg>
+      wainot
+    </a>
     <nav>
-      <a href="#voorbeelden">Voorbeelden</a>
+      <a href="#voorbeelden">Herken je dit?</a>
       <a href="#hoe">Hoe het werkt</a>
       <a href="#vragen">Vragen</a>
     </nav>
@@ -78,27 +119,57 @@
 
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow">Stop met twijfelen, begin met één klus</p>
-      <h1>Eén klus die je elke week kwijt bent? Laat AI hem overnemen. Samen kijken we hoe.</h1>
-      <p class="lead">Je hoeft geen tools te kennen. Vertel me welke klus je opbreekt, en je krijgt binnen een paar dagen een concreet plan: wat AI doet, wat jij doet, en wat je deze week al kunt testen.</p>
-      <div class="cta-row">
-        <a class="btn" href="#contact">Ja, ik beschrijf mijn klus</a>
-        <a class="btn ghost" href="#voorbeelden">Herken ik mezelf hierin?</a>
+      <div>
+        <p class="eyebrow">Eén klus. Eén eerste stap.</p>
+        <h1>Eén klus die je elke week kwijt bent? <em>Laat AI hem overnemen.</em></h1>
+        <p class="lead">Je hoeft geen tools te kennen. Vertel me welke klus je opbreekt. Dan krijg je een concreet plan: wat AI doet, wat jij doet, en wat je deze week al kunt testen.</p>
+        <div class="cta-row">
+          <a class="btn" href="#contact">Ja, ik beschrijf mijn klus</a>
+          <a class="btn ghost" href="#voorbeelden">Herken ik mezelf hierin?</a>
+        </div>
+        <p class="hint-small">Gratis en vrijblijvend. Je tekent niets, je betaalt niets, je beslist zelf.</p>
       </div>
-      <p class="hint-small">Gratis en vrijblijvend. Je tekent niets, je betaalt niets, je beslist zelf.</p>
+      <svg class="hero-art" viewBox="0 0 520 440" role="img" aria-label="Een pad dat door een bos loopt, met een lichtpunt aan het eind">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6f5ef"/><stop offset="1" stop-color="#fbfaf6"/></linearGradient>
+          <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#f2b544" stop-opacity="0.95"/><stop offset="1" stop-color="#f2b544" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect x="0" y="0" width="520" height="440" rx="28" fill="url(#sky)"/>
+        <circle cx="330" cy="150" r="120" fill="url(#glow)"/>
+        <circle cx="330" cy="150" r="22" fill="#f2b544"/>
+        <path d="M0 300 Q130 260 260 300 T520 300 V440 H0Z" fill="#cfe6dc"/>
+        <g fill="#8fc2ae"><path d="M40 300 L70 230 L100 300Z"/><path d="M110 300 L150 215 L190 300Z"/><path d="M380 300 L420 225 L460 300Z"/><path d="M430 300 L470 240 L505 300Z"/></g>
+        <g fill="#1f7a63"><path d="M60 330 L95 255 L130 330Z"/><path d="M160 340 L200 262 L240 340Z"/><path d="M360 340 L398 262 L436 340Z"/><path d="M420 345 L455 278 L490 345Z"/></g>
+        <path d="M260 440 Q270 380 250 340 Q232 310 262 300" stroke="#f4efe4" stroke-width="34" fill="none" stroke-linecap="round"/>
+        <path d="M260 440 Q270 380 250 340 Q232 310 262 300" stroke="#e4dccb" stroke-width="2" fill="none" stroke-dasharray="6 10"/>
+        <circle cx="262" cy="300" r="8" fill="#f2b544"/>
+        <g fill="#0f4d3f"><circle cx="300" cy="380" r="4"/><circle cx="210" cy="410" r="3"/></g>
+      </svg>
     </div>
   </section>
 
   <section id="voorbeelden" class="warm">
     <div class="wrap">
       <p class="eyebrow">Herken jij jezelf hierin?</p>
-      <h2>Dit zijn de klussen die ik vaak zie.</h2>
-      <p class="sub">Klein, saai, terugkerend. Precies daar wint AI het meeste tijd terug.</p>
+      <h2>De klussen die je liever kwijt bent.</h2>
+      <p class="sub">Klein, saai, terugkerend. Precies daar wint AI de meeste tijd terug.</p>
       <div class="examples">
-        <div class="example"><strong>"Mijn inbox loopt elke ochtend over."</strong><span>Sorteren, samenvatten en concepten klaarzetten. Jij drukt op verzenden.</span></div>
-        <div class="example"><strong>"Een offerte kost me een halve middag."</strong><span>AI maakt de eerste versie uit je eerdere werk. Jij maakt hem scherp en af.</span></div>
-        <div class="example"><strong>"Ik weet niet meer wat er in onze documenten staat."</strong><span>Vraag het gewoon, en krijg antwoord met de bron erbij, zodat je het kunt nalezen.</span></div>
-        <div class="example"><strong>"Ik wil hier iets mee, maar niet weten waar te beginnen."</strong><span>Wij kiezen samen één klus, en jij zet deze week de eerste stap.</span></div>
+        <div class="example">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1f7a63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+          <div><strong>"Mijn inbox loopt elke ochtend over."</strong><span>Sorteren, samenvatten en concepten klaarzetten. Jij drukt op verzenden.</span></div>
+        </div>
+        <div class="example">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1f7a63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h5"/></svg></div>
+          <div><strong>"Een offerte kost me een halve middag."</strong><span>AI maakt de eerste versie uit je eerdere werk. Jij maakt hem scherp en af.</span></div>
+        </div>
+        <div class="example">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1f7a63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div>
+          <div><strong>"Ik weet niet meer wat er in onze documenten staat."</strong><span>Vraag het gewoon, en krijg antwoord met de bron erbij, zodat je het kunt nalezen.</span></div>
+        </div>
+        <div class="example">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1f7a63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19c4-2 5-8 16-14"/><circle cx="5" cy="19" r="1.5"/><path d="M14 6l4 4"/></svg></div>
+          <div><strong>"Ik wil hier iets mee, maar niet weten waar te beginnen."</strong><span>Wij kiezen samen één klus, en jij zet deze week de eerste stap.</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -109,18 +180,41 @@
       <h2>Van klus naar resultaat in drie stappen.</h2>
       <p class="sub">Geen cursus, geen maandenlang traject. Jij houdt de regie.</p>
       <div class="grid">
-        <div class="card"><div class="num">1</div><h3>Jij stuurt je klus</h3><p>Wat doe je nu, hoeveel tijd kost het, en wat moet er uitkomen? Een paar zinnen is genoeg.</p></div>
-        <div class="card"><div class="num">2</div><h3>Je krijgt een eerlijk plan</h3><p>Wat AI goed kan, wat niet, en één eerste stap. Soms is het antwoord: dit hoeft niet met AI. Dat hoor je dan ook.</p></div>
-        <div class="card"><div class="num">3</div><h3>Jij beslist wat er gebeurt</h3><p>Zelf aan de slag met mijn advies, of samen uitwerken. Niets gebeurt zonder jouw akkoord.</p></div>
+        <div class="card"><span class="step-num">Stap 1</span><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1f7a63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4z"/></svg></div><h3>Jij stuurt je klus</h3><p>Wat doe je nu, hoeveel tijd kost het, en wat moet er uitkomen? Een paar zinnen is genoeg.</p></div>
+        <div class="card"><span class="step-num">Stap 2</span><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1f7a63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3 11c.6.5 1 1.2 1 2h4c0-.8.4-1.5 1-2a6 6 0 0 0-3-11z"/></svg></div><h3>Je krijgt een eerlijk plan</h3><p>Wat AI goed kan, wat niet, en één eerste stap. Soms is het antwoord: dit hoeft niet met AI. Dat hoor je dan ook.</p></div>
+        <div class="card"><span class="step-num">Stap 3</span><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1f7a63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><h3>Jij beslist wat er gebeurt</h3><p>Zelf aan de slag met mijn advies, of samen uitwerken. Niets gebeurt zonder jouw akkoord.</p></div>
       </div>
     </div>
   </section>
 
   <section id="vragen" class="warm">
     <div class="wrap">
+      <div class="band">
+        <div>
+          <p class="eyebrow" style="background:rgba(255,255,255,.15); color:#fff;">Nieuwsgierig?</p>
+          <h2>Je hoeft het niet allemaal te snappen.</h2>
+          <p>Eén klus is genoeg om te beginnen. Dat hoef je niet eerst uit te zoeken. Dat zoeken we samen.</p>
+          <a class="btn" href="#contact">Beschrijf je klus</a>
+        </div>
+        <svg class="band-art" viewBox="0 0 320 260" aria-hidden="true">
+          <rect x="0" y="0" width="320" height="260" rx="22" fill="rgba(255,255,255,.08)"/>
+          <circle cx="160" cy="120" r="70" fill="none" stroke="#f2b544" stroke-width="3" stroke-dasharray="4 10"/>
+          <circle cx="160" cy="120" r="38" fill="#f2b544"/>
+          <path d="M160 120 L240 60" stroke="#fff" stroke-width="2" stroke-dasharray="3 6"/>
+          <circle cx="240" cy="60" r="10" fill="#fff"/>
+          <circle cx="70" cy="190" r="8" fill="#9fdcc7"/>
+          <circle cx="260" cy="200" r="6" fill="#9fdcc7"/>
+          <path d="M70 190 L160 120" stroke="#9fdcc7" stroke-width="2" stroke-dasharray="3 6"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
       <p class="eyebrow">Veelgestelde vragen</p>
       <h2>Wat je misschien wilt weten</h2>
-      <div class="box" style="margin-top:24px">
+      <div class="box" style="margin-top:26px">
         <details open><summary>Moet ik technisch zijn?</summary><p>Nee. Je hebt een concrete klus en de bereidheid om te proberen. De rest komt in het gesprek.</p></details>
         <details><summary>Gaat AI mijn werk overnemen?</summary><p>De beslissingen blijven bij jou. AI stelt voor, en jij keurt elke stap goed. Ik help je vooral met de klussen die je niet meer wilt doen.</p></details>
         <details><summary>Wat kost het?</summary><p>Het eerste gesprek is vrijblijvend en kost niets. Wat het daarna kost, hangt af van je use case. Dat bespreken we vooraf, zodat je altijd weet waar je aan toe bent.</p></details>
@@ -129,7 +223,7 @@
     </div>
   </section>
 
-  <section id="contact" class="final">
+  <section id="contact" class="final warm">
     <div class="wrap">
       <p class="eyebrow">Jouw klus, jouw stap</p>
       <h2>Welke klus kost jou elke week het meeste tijd?</h2>
@@ -142,7 +236,7 @@
         <label for="usecase">Jouw concrete use case</label>
         <textarea id="usecase" name="usecase" placeholder="Bijvoorbeeld: Ik krijg elke week tientallen offerteaanvragen, en het kost me een halve dag om ze te beantwoorden. Ik wil dat sneller, zonder dat het klinkt als een robot."></textarea>
         <p class="hint">Deze pagina stuurt nog niets door. Het formulier opent je mailprogramma.</p>
-        <p style="margin-top:22px"><button class="btn" type="submit">Stuur mijn klus in</button></p>
+        <p style="margin-top:24px"><button class="btn" type="submit">Stuur mijn klus in</button></p>
       </form>
     </div>
   </section>
