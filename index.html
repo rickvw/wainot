@@ -33,7 +33,7 @@
     .card h3 { margin:0 0 8px; font-size:19px; }
     .card p { margin:0; color:var(--muted); font-size:15px; }
     .warm { background: var(--warm); }
-    .examples { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:14px; }
+    .examples { display:grid; grid-template-columns: repeat(2, 1fr); gap:14px; }
     .example { background:#fff; border-left:4px solid var(--accent); border-radius:10px; padding:18px 20px; color:var(--ink); }
     .example strong { display:block; margin-bottom:4px; }
     .example span { color:var(--muted); font-size:15px; }
@@ -49,7 +49,7 @@
     textarea { min-height: 130px; resize: vertical; }
     .hint { font-size:13px; color:var(--muted); margin-top:6px; }
     footer { padding: 36px 0; color: var(--muted); font-size: 14px; border-top:1px solid var(--line); }
-    @media (max-width: 640px) { nav { display:none; } section { padding: 54px 0; } .hero { padding-top: 56px; padding-bottom: 56px; } .final { padding: 60px 0; } }
+    @media (max-width: 640px) { nav { display:none; } .examples { grid-template-columns: 1fr; } section { padding: 54px 0; } .hero { padding-top: 56px; padding-bottom: 56px; } .final { padding: 60px 0; } }
   </style>
 </head>
 <body>
