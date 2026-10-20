@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI-hulp voor jouw vraagstuk</title>
+  <meta name="description" content="Heb je een AI-vraag of een klus die je wilt aanpakken? Vertel wat je wilt bereiken, dan kijken we samen of en hoe AI helpt.">
+  <style>
+    :root { --ink:#1c1c1e; --muted:#5b5b63; --bg:#fbfaf7; --card:#ffffff; --line:#e6e3dc; --accent:#1f6f5c; --accent-2:#e9f3ef; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
+    a { color:var(--accent); }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+    header { padding: 20px 0; border-bottom:1px solid var(--line); background:#fff; position:sticky; top:0; z-index:1; }
+    header .wrap { display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
+    .logo { font-weight:700; text-decoration:none; color:var(--ink); }
+    nav a { margin-left:18px; color:var(--muted); text-decoration:none; font-size:15px; }
+    .btn { display:inline-block; background:var(--accent); color:#fff; padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:600; }
+    .btn.ghost { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+    section { padding: 64px 0; }
+    .hero h1 { font-size: clamp(32px, 5vw, 52px); line-height:1.15; margin: 0 0 16px; letter-spacing:-0.02em; }
+    .hero p.lead { font-size: 20px; color: var(--muted); max-width: 680px; margin: 0 0 28px; }
+    .cta-row { display:flex; gap:12px; flex-wrap:wrap; }
+    h2 { font-size: 30px; margin:0 0 12px; letter-spacing:-0.01em; }
+    .sub { color:var(--muted); max-width: 680px; margin: 0 0 32px; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:16px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px; }
+    .card h3 { margin:0 0 8px; font-size:18px; }
+    .card p { margin:0; color:var(--muted); font-size:15px; }
+    .steps { counter-reset: s; }
+    .step { display:flex; gap:16px; align-items:flex-start; margin-bottom:20px; }
+    .step::before { counter-increment: s; content: counter(s); flex:0 0 36px; height:36px; border-radius:50%; background:var(--accent-2); color:var(--accent); font-weight:700; display:flex; align-items:center; justify-content:center; }
+    .step h3 { margin:0 0 4px; font-size:18px; }
+    .step p { margin:0; color:var(--muted); }
+    .alt { background:#f3f1ec; }
+    .principles li { margin-bottom:10px; }
+    form { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:28px; max-width:680px; }
+    label { display:block; font-weight:600; margin: 14px 0 6px; font-size:15px; }
+    input, textarea, select { width:100%; padding:11px 12px; border:1px solid var(--line); border-radius:8px; font: inherit; background:#fff; }
+    textarea { min-height: 120px; resize: vertical; }
+    .hint { font-size:13px; color:var(--muted); margin-top:4px; }
+    footer { padding: 32px 0; color: var(--muted); font-size: 14px; border-top:1px solid var(--line); }
+    @media (max-width: 640px) { nav { display:none; } section { padding: 48px 0; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">AI-hulp</a>
+    <nav>
+      <a href="#hoe">Hoe het werkt</a>
+      <a href="#waar">Waarmee ik help</a>
+      <a href="#principes">Uitgangspunten</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Stel je vraag</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Een AI-vraag? Vertel het, dan denken we mee.</h1>
+      <p class="lead">Je hebt een klus, een kans of een vraag over AI. Ik help je bepalen wat zinvol is, wat je zelf kunt doen en waar je professionele hulp nodig hebt. In gewone taal, zonder jargon.</p>
+      <div class="cta-row">
+        <a class="btn" href="#contact">Beschrijf je vraag</a>
+        <a class="btn ghost" href="#hoe">Zo werkt het</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="waar" class="alt">
+    <div class="wrap">
+      <h2>Waarmee je terecht kunt</h2>
+      <p class="sub">Voorbeelden van vragen die ik vaak krijg. Het hoeft niet op een lijstje te passen.</p>
+      <div class="grid">
+        <div class="card"><h3>Werk sneller</h3><p>Taken die steeds terugkomen, zoals mails, notities of administratie. Welke kun je met AI doen, en welke niet?</p></div>
+        <div class="card"><h3>Zoek uit wat kan</h3><p>Je weet dat AI iets kan opleveren, maar niet wat. Ik help je de juiste vraag te stellen en een eerste plan te maken.</p></div>
+        <div class="card"><h3>Kies een tool</h3><p>Er zijn honderden AI-tools. Ik vergelijk op wat jij nodig hebt, en wat het kost.</p></div>
+        <div class="card"><h3>Schrijf en onderzoek</h3><p>Hulp bij brieven, voorstellen of onderzoek, met bronnen die je zelf kunt controleren.</p></div>
+        <div class="card"><h3>Leer het zelf</h3><p>Je wilt begrijpen hoe AI werkt, zonder cursus van tien uur. Ik leg het uit op jouw niveau.</p></div>
+        <div class="card"><h3>Twijfel je?</h3><p>Soms is het antwoord: dit hoeft niet met AI. Dat hoor je dan ook van mij.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hoe">
+    <div class="wrap">
+      <h2>Hoe het werkt</h2>
+      <p class="sub">Drie stappen. Je betaalt niets voordat je weet wat je krijgt.</p>
+      <div class="steps">
+        <div class="step"><div><h3>Vertel je vraag</h3><p>Via het formulier hieronder. Een paar zinnen is genoeg: wat wil je bereiken, en wat staat je nu in de weg?</p></div></div>
+        <div class="step"><div><h3>Ik denk mee</h3><p>Ik kom terug met een korte reactie: wat AI hierin kan, wat niet, en een eerste stap die je morgen kunt zetten.</p></div></div>
+        <div class="step"><div><h3>Kies wat past</h3><p>Zelf doen met mijn advies, of samen uitwerken. Jij beslist, en pas daarna wordt er iets afgesproken.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="principes" class="alt">
+    <div class="wrap">
+      <h2>Uitgangspunten</h2>
+      <p class="sub">Waar ik op let, en waarom je mij kunt vertrouwen.</p>
+      <ul class="principles">
+        <li><strong>De mens beslist.</strong> AI stelt voor, een mens keurt goed. Niets wordt zonder jouw akkoord verstuurd of gepubliceerd.</li>
+        <li><strong>Eerlijk over grenzen.</strong> Als AI niet helpt, zeg ik dat. Ik verkoop geen tool die je niet nodig hebt.</li>
+        <li><strong>Jouw gegevens blijven van jou.</strong> Ik vraag alleen wat nodig is, en gebruik het voor jouw vraag.</li>
+        <li><strong>Gewone taal.</strong> Geen jargon. Als ik een term gebruik, leg ik hem uit.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Stel je vraag</h2>
+      <p class="sub">Deze pagina stuurt nog niets door. Gebruik voorlopig de mail hieronder.</p>
+      <form action="mailto:info@rickvanwietmarschen.nl" method="post" enctype="text/plain">
+        <label for="naam">Naam</label>
+        <input id="naam" name="naam" autocomplete="name">
+        <label for="mail">E-mail</label>
+        <input id="mail" name="mail" type="email" autocomplete="email">
+        <label for="vraag">Wat wil je bereiken?</label>
+        <textarea id="vraag" name="vraag" placeholder="Bijvoorbeeld: ik wil mijn offertes sneller schrijven zonder dat het klinkt als een robot."></textarea>
+        <p class="hint">Je hoeft niets technisch te weten. Een paar zinnen is genoeg.</p>
+        <p style="margin-top:20px"><button class="btn" type="submit">Verstuur</button></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    AI-hulp · Gemaakt met zorg. Geen beloftes die ik niet kan waarmaken.
+  </div>
+</footer>
+
+</body>
+</html>
