@@ -268,14 +268,19 @@
       <p class="eyebrow">Jouw klus, jouw stap</p>
       <h2>Welke klus kost jou elke week het meeste tijd?</h2>
       <p class="sub">Schrijf het in een paar zinnen op. Binnen een paar dagen hoor je van mij wat AI ervan kan maken, en welke stap je deze week zet.</p>
-      <form action="mailto:info@rickvanwietmarschen.nl" method="post" enctype="text/plain">
+      <form action="https://api.web3forms.com/submit" method="post">
+        <input type="hidden" name="access_key" value="1f71804a-ed51-467e-9b23-f9ea5e9e557c">
+        <input type="hidden" name="subject" value="Nieuwe klus via wainot.nl">
+        <input type="hidden" name="from_name" value="wainot.nl">
+        <input type="hidden" name="redirect" value="https://wainot.nl/bedankt.html">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
         <label for="naam">Naam</label>
-        <input id="naam" name="naam" autocomplete="name">
+        <input id="naam" name="name" autocomplete="name" required>
         <label for="mail">E-mail</label>
-        <input id="mail" name="mail" type="email" autocomplete="email">
+        <input id="mail" name="email" type="email" autocomplete="email" required>
         <label for="usecase">Jouw concrete use case</label>
-        <textarea id="usecase" name="usecase" placeholder="Bijvoorbeeld: Ik krijg elke week tientallen offerteaanvragen, en het kost me een halve dag om ze te beantwoorden. Ik wil dat sneller, zonder dat het klinkt als een robot."></textarea>
-        <p class="hint">Deze pagina stuurt nog niets door. Het formulier opent je mailprogramma.</p>
+        <textarea id="usecase" name="usecase" required placeholder="Bijvoorbeeld: Ik krijg elke week tientallen offerteaanvragen, en het kost me een halve dag om ze te beantwoorden. Ik wil dat sneller, zonder dat het klinkt als een robot."></textarea>
+        <p class="hint">Je gegevens komen binnen bij wainot. Ik reageer zo snel mogelijk.</p>
         <p style="margin-top:24px"><button class="btn" type="submit">Stuur mijn klus in</button></p>
       </form>
     </div>
